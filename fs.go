@@ -8,9 +8,9 @@ The first step is to create a Filesystemer object based on the absolute
 filesystem path you want to represent (using a provided constructor):
 	fs := NewPassThroughFilesystem('/my/abs/path', false)
 At this point, all interaction with the Filesystemer should be relative to the
-root path.  For exaple, to check if /my/abs/path/lower/dir exists, you'd do
+root path.  For example, to check if /my/abs/path/lower/dir exists, you'd do
 something like:
-	fs.PathExists('lower/dir') # false
+	fs.PathExists('lower/dir') // false
 If it did not exist, and you wanted to make a director there, you could do:
 	fs.MkPath('lower/dir')
 If you wanted to then make a file in this path, you might do:
@@ -20,8 +20,8 @@ Then to retrieve the file, you'd do:
 	myFiler, err := fs.GetFile('lower/dir/roflcopter.jpeg')
 To remove the newly created file, this would work:
 	fs.RmPath('lower/dir/roflcopter.jpeg')
-	# Alternatively, recursively delete the whole directory
-	# fs.RmPath('lower')
+	// Alternatively, recursively delete the whole directory
+	// fs.RmPath('lower')
 */
 package filesystem
 
